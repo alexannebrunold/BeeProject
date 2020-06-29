@@ -12,6 +12,24 @@
 			</p>
 			<button>Créer votre veste</button>
 		</section>
+		<section class="home__values">
+			<div>
+				<img src="@/assets/img/logos/unicorn.svg" alt="" />
+				<p>Vegan</p>
+			</div>
+			<div>
+				<img src="@/assets/img/logos/chanvre.svg" alt="" />
+				<p>CHanvre</p>
+			</div>
+			<div>
+				<img src="@/assets/img/logos/local.svg" alt="" />
+				<p>Local</p>
+			</div>
+			<div>
+				<img src="@/assets/img/logos/green.svg" alt="" />
+				<p>Less impact</p>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -24,28 +42,25 @@ export default {
 
 <style lang="scss">
 .home {
-	background-image: url("~@/assets/img/jacket1.svg");
-	width: auto;
-	background-size: cover;
-	background-position: center;
-	@include laptop {
-		background: url("~@/assets/img/bgHomeDesktop.jpg");
-		background-repeat: no-repeat;
-	}
 	&__header {
 		background-color: $primary;
-		height: 55px;
+		height: 80vh;
 		width: 100%;
+		background-image: url("~@/assets/img/jacket1.svg");
+		background-size: cover;
+		background-position: center;
+		@include laptop {
+			background: url("~@/assets/img/bgHomeDesktop.jpg");
+			background-repeat: no-repeat;
+		}
 		&--title {
 			font-family: "Baloo Bhai 2";
 			font-weight: 500;
 			font-size: 48px;
 			color: $white;
-			padding-top: 2%;
 		}
 	}
 	&__contexte {
-		margin-top: 120%;
 		@include laptop {
 			margin-top: 10%;
 			float: right;
@@ -85,14 +100,15 @@ export default {
 			padding: 10px 20px;
 			user-select: none;
 			float: left;
-
 			filter: drop-shadow(4px 4px 0 $secondaryPink);
+			display: none;
 			@include tablet {
 				padding: 10px 40px;
 				font-size: 16px;
 			}
 			@include laptop {
 				font-size: 16px;
+				display: block;
 			}
 			@include pc {
 				font-size: 22px;
