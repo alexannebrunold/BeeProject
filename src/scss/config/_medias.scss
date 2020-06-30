@@ -23,6 +23,9 @@ h1 {
 	color: $primary;
 	margin-bottom: 6%;
 	text-align: center;
+	@include tablet {
+		font-size: 40px;
+	}
 	@include laptop {
 		padding-top: 2%;
 		font-size: 48px;

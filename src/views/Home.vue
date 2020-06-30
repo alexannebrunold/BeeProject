@@ -105,9 +105,12 @@ export default {
 	}
 	&__contexte {
 		margin-top: 20%;
-
 		height: 50vh;
-
+		@include tablet {
+			margin-top: 4%;
+			padding-bottom: 6%;
+			height: auto;
+		}
 		@include laptop {
 			margin-top: -30%;
 			float: right;
@@ -116,10 +119,14 @@ export default {
 		& h2 {
 			color: $secondaryOrange;
 			font-family: "Baloo Bhai 2";
-			font-weight: 400;
+			font-weight: 600;
 			font-size: 24px;
+			@include tablet {
+				font-size: 32px;
+				margin-bottom: 2%;
+			}
 			@include laptop {
-				color: $secondaryPink;
+				color: $white;
 				width: 400px;
 				text-align: left;
 				font-size: 60px;
@@ -130,6 +137,9 @@ export default {
 			color: $black;
 			font-family: "Montserrat";
 			font-size: 12px;
+			@include tablet {
+				font-size: 20px;
+			}
 			@include laptop {
 				width: 500px;
 				text-align: left;
@@ -171,6 +181,11 @@ export default {
 	}
 	&__choice {
 		width: 100%;
+		& p {
+			@include tablet {
+				font-size: 20px;
+			}
+		}
 		&__choices {
 			display: flex;
 			flex-direction: column;
