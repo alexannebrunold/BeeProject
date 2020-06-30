@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="personnalisation page">
 		<ViewJacket />
 		<Footer />
 	</div>
@@ -16,3 +16,9 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss" scoped>
+.personnalisation {
+	width: 100%;
+}
+</style>
