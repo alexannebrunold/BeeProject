@@ -16,8 +16,8 @@
 				<img src="@/assets/img/undo.svg" alt="" class="leftArrow" v-on:click="turnRight" />
 				<!-- <img src="@/assets/img/leftArrow.svg" alt="" class="rigthArrow" v-on:click="turnRight" /> -->
 			</div>
-			<div>
-				Been
+			<div class="">
+				<img src="@/assets/img/bin.svg" alt="" />
 			</div>
 		</span>
 	</div>
@@ -53,38 +53,33 @@ export default {
 		flex-direction: row;
 		align-items: center;
 		&--zoom {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			justify-content: space-around;
+			// display: flex;
+			// flex-direction: column;
+			// height: 100%;
+			// justify-content: space-around;
+			// width: auto;
 			& img:nth-child(1) {
 				margin-bottom: 80%;
 			}
 		}
 		&--img {
 			width: 90%;
-		}
-		img {
-			width: 80%;
+			& img {
+				width: 251.41px;
+				height: 285.28px;
+			}
 		}
 	}
 	&__second {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 		width: 60%;
 		margin-left: 40%;
 		&--arrows {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
-			& img:nth-child(1) {
-				margin-right: 6%;
-			}
-			// & img:nth-child(2) {
-			// 	margin-left: 6%;
-			// }
 		}
 	}
 }
@@ -98,7 +93,6 @@ header {
 }
 .imageBack {
 	display: none;
-	height: 260px;
 }
 
 .leftArrow {
