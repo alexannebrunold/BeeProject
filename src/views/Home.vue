@@ -12,24 +12,6 @@
 			</p>
 			<button>Créer votre veste</button>
 		</section>
-		<!-- <section class="home__values"> -->
-		<!-- <div>
-				<img src="@/assets/img/logos/unicorn.svg" alt="" />
-				<p>Vegan</p>
-			</div>
-			<div>
-				<img src="@/assets/img/logos/chanvre.svg" alt="" />
-				<p>CHanvre</p>
-			</div>
-			<div>
-				<img src="@/assets/img/logos/local.svg" alt="" />
-				<p>Local</p>
-			</div>
-			<div>
-				<img src="@/assets/img/logos/green.svg" alt="" />
-				<p>Less impact</p>
-			</div> -->
-		<!-- </section> -->
 
 		<section class="home__choice">
 			<h1 class="home__choice--title">Choisis ton modèle</h1>
@@ -61,6 +43,28 @@
 				<img src="@/assets/img/Star_2.jpg" alt="" class="div2" />
 				<img src="@/assets/img/Star_3.jpg" alt="" class="div3" />
 				<img src="@/assets/img/Star_4.jpg" alt="" class="div4" />
+			</div>
+		</section>
+
+		<section class="home__values">
+			<h1>Nos valeurs</h1>
+			<div class="home__values__all">
+				<div>
+					<img src="@/assets/img/logos/unicorn.svg" alt="" />
+					<p>Vegan</p>
+				</div>
+				<div>
+					<img src="@/assets/img/logos/chanvre.svg" alt="" />
+					<p>CHanvre</p>
+				</div>
+				<div>
+					<img src="@/assets/img/logos/local.svg" alt="" />
+					<p>Local</p>
+				</div>
+				<div>
+					<img src="@/assets/img/logos/green.svg" alt="" />
+					<p>Less impact</p>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -164,20 +168,6 @@ export default {
 	}
 	&__choice {
 		width: 100%;
-
-		// &--title {
-		// 	font-family: "Baloo Bhai 2";
-		// 	font-size: 24px;
-		// 	font-weight: 600;
-		// 	color: $primary;
-		// 	margin-bottom: 8%;
-		// 	text-align: center;
-		// 	@include laptop {
-		// 		margin-bottom: 6%;
-		// 		padding-top: 2%;
-		// 		font-size: 48px;
-		// 	}
-		// }
 		&__choices {
 			display: flex;
 			flex-direction: column;
@@ -223,8 +213,18 @@ export default {
 		flex-direction: column;
 		align-items: center;
 		padding-top: 8%;
-
+		margin-bottom: 6%;
+		&--button {
+			margin-top: -4%;
+			margin-bottom: 2%;
+		}
 		&__images {
+			& img:nth-child(2) {
+				display: none;
+			}
+			& img:nth-child(3) {
+				display: none;
+			}
 			@include laptop {
 				display: grid;
 				grid-template-columns: 1fr 0.5fr 1fr;
@@ -239,10 +239,12 @@ export default {
 				& img:nth-child(2) {
 					grid-area: 1 / 2 / 2 / 3;
 					margin-top: 8%;
+					display: block;
 				}
 				& img:nth-child(3) {
 					grid-area: 1 / 2 / 2 / 3;
 					margin-top: 90%;
+					display: block;
 				}
 				& img:nth-child(4) {
 					grid-area: 1 / 3 / 2 / 4;
@@ -251,6 +253,17 @@ export default {
 			& img {
 				width: 80%;
 				margin: 4% 0;
+			}
+		}
+	}
+	&__values {
+		&__all {
+			display: flex;
+			flex-direction: column;
+			@include laptop {
+				flex-direction: row;
+				justify-content: space-around;
+				height: 80%;
 			}
 		}
 	}
