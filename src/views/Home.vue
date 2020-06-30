@@ -159,6 +159,8 @@ export default {
 			float: left;
 			filter: drop-shadow(4px 4px 0 $secondaryPink);
 			display: none;
+			font-family: "Montserrat";
+			text-transform: uppercase;
 			@include tablet {
 				padding: 10px 40px;
 				font-size: 16px;
