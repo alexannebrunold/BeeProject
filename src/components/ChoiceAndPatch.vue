@@ -21,6 +21,7 @@
 				</select>
 			</span>
 		</div>
+
 		<h1>Collections</h1>
 	</div>
 </template>
@@ -28,11 +29,11 @@
 <script>
 export default {
 	name: "Button",
+	data() {},
+	components: {},
 	props: {},
 	methods: {},
-	mounted() {
-		console.log(this.$refs)
-	},
+	mounted() {},
 }
 </script>
 
