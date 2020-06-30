@@ -67,15 +67,18 @@
 				</div>
 			</div>
 		</section>
+		<Footer />
 	</div>
 </template>
 
 <script>
 import Button from "@/components/Button.vue"
+import Footer from "@/components/Footer.vue"
 export default {
 	name: "Home",
 	components: {
 		Button,
+		Footer,
 	},
 }
 </script>
@@ -257,6 +260,7 @@ export default {
 		}
 	}
 	&__values {
+		padding-bottom: 6%;
 		&__all {
 			display: flex;
 			flex-direction: column;
