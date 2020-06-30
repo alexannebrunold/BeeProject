@@ -12,8 +12,8 @@
 			</p>
 			<button>Créer votre veste</button>
 		</section>
-		<section class="home__values">
-			<div>
+		<!-- <section class="home__values"> -->
+		<!-- <div>
 				<img src="@/assets/img/logos/unicorn.svg" alt="" />
 				<p>Vegan</p>
 			</div>
@@ -28,15 +28,51 @@
 			<div>
 				<img src="@/assets/img/logos/green.svg" alt="" />
 				<p>Less impact</p>
+			</div> -->
+		<!-- </section> -->
+
+		<section class="home__choice">
+			<h1 class="home__choice--title">Choisis ton modèle</h1>
+			<div class="home__choice__choices">
+				<div class="home__choice__choices__firstChoice">
+					<img src="@/assets/img/Veste_Jean_Bleached.jpg" alt="" />
+					<span class="home__choice__choices__firstChoice--buttonChoice">
+						<Button textButton="Personnaliser" PageName="#" />
+					</span>
+
+					<p>À partir de 60€</p>
+				</div>
+				<div class="home__choice__choices__secondChoice">
+					<img src="@/assets/img/Veste_Jean_Noire.jpg" alt="" />
+					<span class="home__choice__choices__secondChoice--buttonChoice">
+						<Button textButton="Personnaliser" PageName="#" />
+					</span>
+					<p>À partir de 60€</p>
+				</div>
+			</div>
+		</section>
+		<section class="home__fans">
+			<h1>Ils sont déjà fans de Bee</h1>
+			<span class="home__fans--button">
+				<Button textButton="Suivez-nous sur Instagram" PageName="#" />
+			</span>
+			<div class="home__fans__images">
+				<img src="@/assets/img/Star_1.jpg" alt="" class="div1" />
+				<img src="@/assets/img/Star_2.jpg" alt="" class="div2" />
+				<img src="@/assets/img/Star_3.jpg" alt="" class="div3" />
+				<img src="@/assets/img/Star_4.jpg" alt="" class="div4" />
 			</div>
 		</section>
 	</div>
 </template>
 
 <script>
+import Button from "@/components/Button.vue"
 export default {
 	name: "Home",
-	components: {},
+	components: {
+		Button,
+	},
 }
 </script>
 
@@ -61,8 +97,12 @@ export default {
 		}
 	}
 	&__contexte {
+		margin-top: 20%;
+
+		height: 50vh;
+
 		@include laptop {
-			margin-top: 10%;
+			margin-top: -30%;
 			float: right;
 			width: 40%;
 		}
@@ -119,6 +159,98 @@ export default {
 				color: $white;
 				cursor: pointer;
 				filter: drop-shadow(4px 4px 0 $secondaryPink);
+			}
+		}
+	}
+	&__choice {
+		width: 100%;
+
+		// &--title {
+		// 	font-family: "Baloo Bhai 2";
+		// 	font-size: 24px;
+		// 	font-weight: 600;
+		// 	color: $primary;
+		// 	margin-bottom: 8%;
+		// 	text-align: center;
+		// 	@include laptop {
+		// 		margin-bottom: 6%;
+		// 		padding-top: 2%;
+		// 		font-size: 48px;
+		// 	}
+		// }
+		&__choices {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			@include laptop {
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			&__firstChoice {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 8%;
+				@include laptop {
+					margin-bottom: 0%;
+				}
+				& img {
+					width: 80%;
+				}
+				&--buttonChoice {
+					margin-bottom: 4%;
+				}
+			}
+			&__secondChoice {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				& img {
+					width: 80%;
+				}
+				&--buttonChoice {
+					margin-bottom: 4%;
+				}
+			}
+		}
+	}
+	&__fans {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 8%;
+
+		&__images {
+			@include laptop {
+				display: grid;
+				grid-template-columns: 1fr 0.5fr 1fr;
+				grid-row: 1fr 1fr;
+				gap: 1px 1px;
+				grid-template-areas: ". . ." ". . .";
+				justify-items: center;
+				align-content: center;
+				& img:nth-child(1) {
+					grid-area: 1 / 1 / 2 / 2;
+				}
+				& img:nth-child(2) {
+					grid-area: 1 / 2 / 2 / 3;
+					margin-top: 8%;
+				}
+				& img:nth-child(3) {
+					grid-area: 1 / 2 / 2 / 3;
+					margin-top: 90%;
+				}
+				& img:nth-child(4) {
+					grid-area: 1 / 3 / 2 / 4;
+				}
+			}
+			& img {
+				width: 80%;
+				margin: 4% 0;
 			}
 		}
 	}
