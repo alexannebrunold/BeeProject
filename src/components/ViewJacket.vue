@@ -47,7 +47,7 @@ export default {
 <style lang="scss" scoped>
 .viewJacket {
 	width: 100%;
-	height: 94vh;
+
 	&__first {
 		display: flex;
 		flex-direction: row;

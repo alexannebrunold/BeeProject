@@ -1,18 +1,21 @@
 <template>
 	<div class="personnalisation page">
 		<ViewJacket />
-		<Footer />
+		<ChoiceAndPatch />
+		<!-- <Footer /> -->
 	</div>
 </template>
 
 <script>
 import ViewJacket from "@/components/ViewJacket.vue"
-import Footer from "@/components/Footer.vue"
+import ChoiceAndPatch from "@/components/ChoiceAndPatch.vue"
+// import Footer from "@/components/Footer.vue"
 export default {
 	name: "Home",
 	components: {
 		ViewJacket,
-		Footer,
+		ChoiceAndPatch,
+		// Footer,
 	},
 }
 </script>
@@ -20,5 +23,7 @@ export default {
 <style lang="scss" scoped>
 .personnalisation {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 </style>
